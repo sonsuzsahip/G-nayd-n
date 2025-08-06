@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Günaydınnnn☀️</title>
+  <title>Günaydınnn ☀️</title>
   <style>
     body {
       margin: 0;
@@ -15,7 +15,7 @@
       text-align: center;
     }
 
-    /* Ortadaki romantik günaydın mesajı */
+    /* Kayan romantik günaydın mesajı */
     .message {
       position: absolute;
       top: 50%;
@@ -24,13 +24,20 @@
       font-size: 2.2em;
       font-weight: bold;
       text-shadow: 0 0 20px #ffd1dc, 0 0 40px #ff99cc;
-      animation: fadeIn 6s ease-in-out infinite alternate;
-      line-height: 1.5em;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0.2; }
-      100% { opacity: 1; }
+    .message span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: scrollText 18s linear infinite;
+    }
+
+    @keyframes scrollText {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
     }
 
     /* Süzülen kalpler ve çiçekler */
@@ -65,11 +72,7 @@
 <body>
 
   <div class="message">
-    ☀️ Günaydın muhlu huzurlu sabahlarimiz olsun☀️<br>
-    Seninle başlamak güne,<br>
-    Güneşten daha sıcak,<br>
-    Kuşların sesinden daha huzurlu...<br>
-    Mutlu, umut dolu, sevgi dolu sabahlarımız olsun 💖
+    <span>☀️ Günaydınnn Sevgi... Mutlu, huzurlu ve sevgi dolu sabahlarımız olsun! Seninle başlamak güne; güneşten daha sıcak, kuşların sesinden daha huzurlu... 💖</span>
   </div>
 
   <!-- Huzurlu romantik müzik -->
@@ -80,7 +83,7 @@
   <script>
     // Kalpler ve çiçekler oluşturma
     const colors = ['pink', 'lightpink', 'mistyrose', 'lightcoral', 'plum'];
-    for(let i=0; i<30; i++) {
+    for(let i=0; i<40; i++) {
       const heart = document.createElement('div');
       heart.className = 'heart';
       heart.style.left = Math.random()*100 + 'vw';
