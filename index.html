@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Günaydınnnn☀️</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    /* Ortadaki romantik günaydın mesajı */
+    .message {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.2em;
+      font-weight: bold;
+      text-shadow: 0 0 20px #ffd1dc, 0 0 40px #ff99cc;
+      animation: fadeIn 6s ease-in-out infinite alternate;
+      line-height: 1.5em;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0.2; }
+      100% { opacity: 1; }
+    }
+
+    /* Süzülen kalpler ve çiçekler */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+      opacity: 0.7;
+    }
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+    .heart::before { top: -10px; left: 0; }
+    .heart::after { top: 0; left: -10px; }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(45deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="message">
+    ☀️ Günaydın muhlu huzurlu sabahlarimiz olsun☀️<br>
+    Seninle başlamak güne,<br>
+    Güneşten daha sıcak,<br>
+    Kuşların sesinden daha huzurlu...<br>
+    Mutlu, umut dolu, sevgi dolu sabahlarımız olsun 💖
+  </div>
+
+  <!-- Huzurlu romantik müzik -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Kalpler ve çiçekler oluşturma
+    const colors = ['pink', 'lightpink', 'mistyrose', 'lightcoral', 'plum'];
+    for(let i=0; i<30; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random()*100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random()*5) + 's';
+      heart.style.backgroundColor = colors[Math.floor(Math.random()*colors.length)];
+      document.body.appendChild(heart);
+    }
+  </script>
+
+</body>
+</html>
