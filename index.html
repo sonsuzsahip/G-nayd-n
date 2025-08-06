@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Günaydınnnn ☀️</title>
+  <title>Günaydınnn ☀️</title>
   <style>
     body {
       margin: 0;
@@ -16,29 +16,29 @@
     }
 
     /* Yazıların kapsayıcısı */
-    .message {
+    .message-container {
       position: absolute;
-      bottom: 10%;
+      bottom: -100%; /* En aşağıdan başlar */
       left: 50%;
       transform: translateX(-50%);
+      animation: scrollUp 25s linear infinite;
+    }
+
+    /* Mesaj satırları */
+    .message {
       font-size: 2.2em;
       font-weight: bold;
       text-shadow: 0 0 20px #ffd1dc, 0 0 40px #ff99cc;
       line-height: 1.5em;
+      margin: 0.5em 0;
     }
 
-    /* Her satırın animasyonu */
-    .line {
-      opacity: 0;
-      transform: translateY(50px);
-      animation: slideUp 1.5s forwards;
-    }
-
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* Aşağıdan yukarıya kayma animasyonu */
+    @keyframes scrollUp {
+      0% { bottom: -100%; opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { bottom: 110%; opacity: 0; }
     }
 
     /* Süzülen kalpler */
@@ -72,13 +72,13 @@
 </head>
 <body>
 
-  <div class="message">
-    <div class="line" style="animation-delay: 0s;">☀️ Günaydınnn Sevgi ☀️</div>
-    <div class="line" style="animation-delay: 2s;">Mutlu ve huzurlu sabahlarımız olsun...</div>
-    <div class="line" style="animation-delay: 4s;">Seninle başlamak güne,</div>
-    <div class="line" style="animation-delay: 6s;">Güneşten daha sıcak...</div>
-    <div class="line" style="animation-delay: 8s;">Kuşların sesinden daha huzurlu...</div>
-    <div class="line" style="animation-delay: 10s;">💖 iyi ki varsın 💖</div>
+  <div class="message-container">
+    <div class="message">☀️ Günaydınnn Sevgi ☀️</div>
+    <div class="message">Mutlu ve huzurlu sabahlarımız olsun...</div>
+    <div class="message">Seninle başlamak güne,</div>
+    <div class="message">Güneşten daha sıcak...</div>
+    <div class="message">Kuşların sesinden daha huzurlu...</div>
+    <div class="message">💖 İYİ Kİ VARSIN 💖</div>
   </div>
 
   <!-- Huzurlu romantik müzik -->
