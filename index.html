@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Günaydınnn ☀️</title>
+  <title>Günaydınnnn ☀️</title>
   <style>
     body {
       margin: 0;
@@ -15,32 +15,33 @@
       text-align: center;
     }
 
-    /* Kayan romantik günaydın mesajı */
+    /* Yazıların kapsayıcısı */
     .message {
       position: absolute;
-      top: 50%;
+      bottom: 10%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       font-size: 2.2em;
       font-weight: bold;
       text-shadow: 0 0 20px #ffd1dc, 0 0 40px #ff99cc;
-      white-space: nowrap;
-      overflow: hidden;
-      width: 100%;
+      line-height: 1.5em;
     }
 
-    .message span {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scrollText 18s linear infinite;
+    /* Her satırın animasyonu */
+    .line {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUp 1.5s forwards;
     }
 
-    @keyframes scrollText {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    /* Süzülen kalpler ve çiçekler */
+    /* Süzülen kalpler */
     .heart {
       position: absolute;
       width: 20px;
@@ -72,7 +73,12 @@
 <body>
 
   <div class="message">
-    <span>☀️ Günaydınnn Sevgi... Mutlu, huzurlu ve sevgi dolu sabahlarımız olsun! Seninle başlamak güne; güneşten daha sıcak, kuşların sesinden daha huzurlu... 💖</span>
+    <div class="line" style="animation-delay: 0s;">☀️ Günaydınnn Sevgi ☀️</div>
+    <div class="line" style="animation-delay: 2s;">Mutlu ve huzurlu sabahlarımız olsun...</div>
+    <div class="line" style="animation-delay: 4s;">Seninle başlamak güne,</div>
+    <div class="line" style="animation-delay: 6s;">Güneşten daha sıcak...</div>
+    <div class="line" style="animation-delay: 8s;">Kuşların sesinden daha huzurlu...</div>
+    <div class="line" style="animation-delay: 10s;">💖 iyi ki varsın 💖</div>
   </div>
 
   <!-- Huzurlu romantik müzik -->
@@ -81,9 +87,9 @@
   </audio>
 
   <script>
-    // Kalpler ve çiçekler oluşturma
+    // Kalpler oluşturma
     const colors = ['pink', 'lightpink', 'mistyrose', 'lightcoral', 'plum'];
-    for(let i=0; i<40; i++) {
+    for(let i=0; i<30; i++) {
       const heart = document.createElement('div');
       heart.className = 'heart';
       heart.style.left = Math.random()*100 + 'vw';
